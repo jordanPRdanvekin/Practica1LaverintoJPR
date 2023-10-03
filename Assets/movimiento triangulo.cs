@@ -9,7 +9,6 @@ public class MovimientoTriangulo : MonoBehaviour
     public Rigidbody2D fisicas; //variable para llamar al rigidbody
     public float fuerzaSalto = 10f; // Fuerza del salto
     private bool enSuelo = true; // Variable para verificar si el triángulo está en el suelo
-    private bool enTrampolin = true; // Variable para verificar si el triángulo está en el trampolin
 
     // Este método se llama al inicio del juego
     void Start()
@@ -52,13 +51,7 @@ public class MovimientoTriangulo : MonoBehaviour
         {
             // Cambiar la variable enSuelo a true para indicar que estamos en el suelo
             enSuelo = true;
-        }
-    //Este metodo se llama cuando quiero aplicar fuersa automatica al impacto o colision del objeto ( efecto trampolin)
-          if (colision.gameObject.CompareTag("trampolin"))
-        {
-            //cambia la variable a true y crea el efecto de pulsar la tecla salto pero automaticamente 
-            enTrampolin = true;
-                 fisicas.AddForce(Vector2.up * fuerzaSalto * 2, ForceMode2D.Impulse);
+            
         }
 
     }
