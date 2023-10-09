@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - suelo
+  - llave
+  - coin
+  - obstaculo
+  - reduce
+  - final
   layers:
   - Default
   - TransparentFX
